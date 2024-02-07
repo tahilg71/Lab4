@@ -41,7 +41,7 @@ Description : Responsive Layouts.
     <style>
 		body { margin: 0; padding: 0;}
 		img { max-width: 100%; height: auto; }
-        .container { width: 100%;box-sizing: border-box;}
+        .container { width: 100%;}
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }        
         .main { padding: 15px; margin-left: 150px;}		
         .footer { position: fixed; bottom: 0; width: 100%;}
@@ -86,7 +86,7 @@ Description : Responsive Layouts.
         @media screen and (max-width: 768px) {
             /*I need some CSS codes.*/
 			.main,.menu{
-				width:100%;
+				width:auto;
 				box-sizing: border-box;	
 				float:none;
 				clear: both;		/* Header and menu occupy full width */
@@ -96,12 +96,11 @@ Description : Responsive Layouts.
 			}
 			.medium { 
 				width: 60%;
-				float:left;
-				margin-right:0;
+				box-sizing: border-box;
 			}
 			.small { 
 				width: 40%;
-				float:left;
+				box-sizing: border-box;
 			}
 			
 			
@@ -109,20 +108,25 @@ Description : Responsive Layouts.
 
         @media screen and (max-width: 480px) {
 			.main,.menu{
+				box-sizing: border-box;
 				width:auto;
 				float:none;
 				clear:both;
 			}
 			.large { 
+				box-sizing: border-box;
 				width: 100%
 			}
-			.medium { 
+			.medium {
+				box-sizing: border-box; 
 				width: 100%
 			}
-			.small { 
+			.small {
+				box-sizing: border-box;
 				width: 100%
 			}
 			h1{
+				box-sizing: border-box;
 				font-size: 18px;
 			}
         }
