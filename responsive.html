@@ -41,28 +41,27 @@ Description : Responsive Layouts.
     <style>
 		body { margin: 0; padding: 0;}
 		img { max-width: 100%; height: auto; }
-        .container { width: 100%;}
+        .container { width: 100%; box-sizing: border-box;}
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; }        
         .main { padding: 15px; margin-left: 150px;}		
         .footer { position: fixed; bottom: 0; width: 100%;}
         .news-item { padding: 10px; }
 		
-		.row::after{ 
+		.row { 
 			/*I need some CSS codes.*/
-			content: "";	
-			display: table;
-			clear: both;
+			box-sizing: border-box;
+			display: block;
 		}
 
 		.large, .medium, .small {
 			/*I need some CSS codes.*/
-			width: 100%;
+			box-sizing: border-box;
 			float:left;
 		}
 		
 		.gap {
 			/*I need some CSS codes.*/
-			clear:both;
+
 			height: 50px; /* Getting the margin at the bottom */
 		}
 	
@@ -70,29 +69,30 @@ Description : Responsive Layouts.
 	
 		@media screen and (min-width: 769px) {			
 			.large { 
-				box-sizing: border-box;
-				width: 100%
+
+				width: 100%;
 			}
-			.medium { 
-				box-sizing: border-box;
-				width: 70%
+			.medium { 	
+				width: 70%;
 			}
 			.small { 
-				box-sizing: border-box;
-				width: 30%
+				width: 30%;
 			}
 		}
 
         @media screen and (max-width: 768px) {
             /*I need some CSS codes.*/
-			.main,.menu{
-				width:auto;
-				box-sizing: border-box;	
-				float:none;
-				clear: both;		/* Header and menu occupy full width */
+			.menu{
+				width: 100%;
+				display: inline-block;
+			
+			}
+			.main{
+				margin-left: 0;
 			}
 			.large { 
-				width: 100%;		/*Large items takes up the full width.*/		
+				width: 100%;
+				box-sizing: border-box;	
 			}
 			.medium { 
 				width: 60%;
@@ -108,22 +108,20 @@ Description : Responsive Layouts.
 
         @media screen and (max-width: 480px) {
 			.main,.menu{
+				width: 100%;
 				box-sizing: border-box;
-				width:auto;
-				float:none;
-				clear:both;
 			}
 			.large { 
 				box-sizing: border-box;
-				width: 100%
+				width: 100%;
 			}
 			.medium {
 				box-sizing: border-box; 
-				width: 100%
+				width: 100%;
 			}
 			.small {
 				box-sizing: border-box;
-				width: 100%
+				width: 100%;
 			}
 			h1{
 				box-sizing: border-box;
